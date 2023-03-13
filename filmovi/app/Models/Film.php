@@ -9,6 +9,16 @@ class Film extends Model
 {
     use HasFactory;
 
+    protected $table = 'filmovi';
+
+    protected $fillable = [
+
+        'naziv',
+        'zanr',
+        'brojSale',
+        'nacinPrevodjenja',
+    ];
+    
     public function rezervacije()
     {
         return $this->hasMany(Rezervacija::class);
